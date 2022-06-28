@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add event listener js</title>
+  </head>
+  <body>
+    <h1>Latihan menambahkan event dengan js</h1>
+
+    <h2>masukkan nama dan peranmu dalam game :</h2>
+    <form action="" id="formConditional">
+      <input type="text" id="name" /><br /><br />
+      <input type="text" id="role" /><br /><br />
+      <button type="submit" id="proses">Proses</button>
+    </form>
+
+    <h3>Jawaban dari console game :</h3>
+    <div id="jawaban"></div>
+    <script>
+      let form = document.getElementById("formConditional");
+      let jawaban = document.getElementById("jawaban");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let role = document.getElementById("role").value;
+        jawaban.innerHTML =
+          "<h3> nama anda : " + name + "</h3>" + "<h3>Role : " + role + "</h3>";
+      });
+    </script>
+  </body>
+</html>
