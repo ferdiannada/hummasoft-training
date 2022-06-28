@@ -1,0 +1,2 @@
+# hummasoft-training
+Laravel Class
