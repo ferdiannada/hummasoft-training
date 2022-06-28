@@ -1,6 +1,6 @@
 <?php
 
-class laptop{
+class Laptop{
 
     public $ram = 4;
     public $layar = 14;
@@ -12,4 +12,14 @@ class laptop{
         $this->layar = $value;
     }
 
+    public function upRam($val)
+    {
+        $this->ram = $val;
+    }
+
 }
+$lepi = new Laptop();
+
+echo "RAM Baru : ".$lepi->upRam(8). "<br>";
+echo "RAM Default : ".$lepi->ram. "<br>";
+
