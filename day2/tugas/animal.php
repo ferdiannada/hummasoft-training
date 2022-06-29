@@ -28,6 +28,5 @@ class Animal{
             return "No";
         }
     }
-
     
 }
