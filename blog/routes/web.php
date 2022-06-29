@@ -26,6 +26,11 @@ Route::get('/admin', function () {
     return view('admin', ["title" => $title]);
 })->name('admin');
 
+Route::get('/articles', function () {
+    $title = "Articles";
+    return view('articles', ["title" => $title]);
+})->name('articles');
+
 
 // get : untuk menampilkan halaman atau data saja
 // post : untuk mengirimkan data

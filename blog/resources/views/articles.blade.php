@@ -23,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <h2>ini dashboard</h2>
+        <h2>Ini Calendar</h2>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
