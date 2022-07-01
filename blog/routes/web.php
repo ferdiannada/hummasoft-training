@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,15 +23,12 @@ Route::get('/', function () {
     return view('home', ["title" => $title]);
 })->name('home');
 
+Route::resource('/articles', ArticleController::class);
+
 Route::get('/admin', function () {
     $title = "Admin";
-    return view('admin', ["title" => $title]);
+    return view('admin.', ["title" => $title]);
 })->name('admin');
-
-Route::get('/articles', function () {
-    $title = "Articles";
-    return view('articles', ["title" => $title]);
-})->name('articles');
 
 
 // get : untuk menampilkan halaman atau data saja
@@ -37,3 +36,7 @@ Route::get('/articles', function () {
 // put : untuk mengubah data
 // patch : wajib untuk mengubah semua data
 // delete : untuk menghapus data
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

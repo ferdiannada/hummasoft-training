@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link {{ ($title == "Home" ? "active" : "") }}" aria-current="page" href="{{ route('home') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link {{ ($title == "Posts" ? "active" : "") }}" aria-current="page" href="{{ route('articles.index') }}">Articles</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('admin') }}">Login</a>

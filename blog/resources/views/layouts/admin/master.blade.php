@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Humma-Blog | {{ $title }}</title>
-
+  {{-- bootstrap 5 --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{{ asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback') }}">
   <!-- Font Awesome -->
@@ -221,7 +222,7 @@
 
           <li class="nav-header">Menu</li>
           <li class="nav-item">
-            <a href="{{ route('articles') }}" class="nav-link {{ ($title == "Articles") ? "active" : "" }}">
+            <a href="{{ route('articles.index') }}" class="nav-link {{ ($title == "Articles") ? "active" : "" }}">
               <i class="nav-icon far fa-file-alt"></i>
               <p>
                 Articles
@@ -292,5 +293,6 @@
 {{-- <script src="{{ asset('dist/js/demo.js') }}"></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
